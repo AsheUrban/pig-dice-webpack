@@ -43,12 +43,12 @@ function Player(firstName, totalScore) {
 
 // Business Logic for Dice
 
-function rollDice(max) {
-  return Math.floor(Math.random() * max);
-}
+function rollDice() {
+  return Math.floor(Math.random() * 7);
+} 
+// rollDice(); = 1-6// this is currentScore
 
-function rollTheDice() {
-  let randomNumber = Math.floor(Math.random() * 6) + 1;
-  return randomNumber;
-  console.log(randomeNumber);
-}
+//UI Logic ------
+
+$('#displayresult').empty();
+const favoriteNumber = $("input#favNum").val();
