@@ -40,7 +40,8 @@ Expected Output: player1 = random number between 1-6
 
 ## Known Bugs
 
-* 
+* Current score can still be 0.
+
 
 ## License
 
