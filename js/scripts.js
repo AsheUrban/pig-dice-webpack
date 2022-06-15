@@ -35,7 +35,6 @@ ScoreCard.prototype.assignId = function() {
 function Player(firstName, totalScore) {
   this.firstName = firstName;
   this.totalScore = totalScore;
-  console.log(Player);
 }
 
 // Player.prototype.update = function() {
@@ -44,6 +43,12 @@ function Player(firstName, totalScore) {
 
 // Business Logic for Dice
 
-function RollDice () {
-  this.
+function rollDice(max) {
+  return Math.floor(Math.random() * max);
+}
+
+function rollTheDice() {
+  let randomNumber = Math.floor(Math.random() * 6) + 1;
+  return randomNumber;
+  console.log(randomeNumber);
 }
