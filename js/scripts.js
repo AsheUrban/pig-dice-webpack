@@ -31,6 +31,8 @@ Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
   }
 }
 
+// UI Logic
+
 $(document).ready(function () {
   $("#button1").click(function(event) {
     event.preventDefault();
