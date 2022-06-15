@@ -2,14 +2,15 @@
 // Business Logic for Player ------
 
 function Player() {
-  this.score = 0;
-  this.lastroll2 = 0;
+  this.totalScore = 0;
+  this.currentScore = 0;
 }
 
-// Business Logic for Dice
+let newPlayer1 = new Player(0, 0);
+let newPlayer2 = new Player(0, 0);
 
-function rollDice() {
-  return Math.floor(Math.random() * 7);
-} 
-// rollDice(); = 1-6// this is currentScore
+Player.prototype.RollDice = function (max) {
+  this.currentScore = Math.floor(Math.random() * 7);
+}
+
 
