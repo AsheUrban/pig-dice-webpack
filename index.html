@@ -10,16 +10,25 @@
   <title>PIG DICE</title>
 </head>
     <body>
-      <h1>ARE YOU READY?<h1>
-        <h5>Maybe?</h5>
-
-        <div class="container bottom">
-          <button type="button" class="butn" onClick="rollTheDice()">
-            Roll the Dice
-          </button>
-          <div id="show-score-card">
-            <p>Name: <span class="first-name"></span></p>
-            <p>Total Score: <span class="total-score"></span></p>
-          </div>
+      <div class="container bottom">
+        <h1>ARE YOU READY?<h1>
+          <h5>Maybe?</h5>
+          <h2>Add a Contact:</h2>
+          <form id="new-player-1">
+            <div class="form-group">
+              <label for="new-first-name">Player1 Name: </label>
+              <input type="text"  class="form-control" id="new-first-name">
+            </div>
+            <form id="new-player-2">
+              <div class="form-group">
+                <label for="new-first-name">Player2 Name: </label>
+                <input type="text"  class="form-control" id="new-first-name">
+              </div>
+              <button type="submit" class="btn-primary">Roll Dice</button>
+            <div id="show-score-card">
+              <p>Player Name: <span class="first-name"></span></p>
+              <p>Total Score: <span class="total-score"></span></p>
+            </div>
         </div>
       </body>
+</html>

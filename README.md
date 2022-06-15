@@ -28,6 +28,10 @@ Test: "It should addPlayer and assign id"
 Code: 
 Expected Output: player1 = {firstName, totalScore: undefined, id: 1}
 
+Test: "It should return random number between 1-6 when button is submitted"
+Code: rollDice();
+Expected Output: player1 = random number between 1-6
+
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop

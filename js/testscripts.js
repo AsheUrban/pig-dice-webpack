@@ -7,3 +7,42 @@ function getRandomInt(max) {
 }
 
 var a,t,s,o=(a=1,t=6,Math.floor(Math.random()*t+a));
+
+function showScore(playerId) {
+  const player = ScoreCard.findPlayer(playerId);
+  $("#show-score").show();
+  $("#btn").click(function(){
+    $("#test3").val("Dolly Duck");
+  
+    if(span.innerHTML === ""){
+      span.parentElement.remove();
+      //console.log('its empty',span.innerHTML)
+    }
+  })
+  let buttons = $("#buttons");
+  buttons.empty();
+  buttons.append("<button class='deleteButton' id=" +  + contact.id + ">Delete</button>");
+}
+
+
+$("#btn1").click(function(){
+  $("#test1").text("Hello world!");
+});
+$("#btn2").click(function(){
+  $("#test2").html("<b>Hello world!</b>");
+});
+$("#btn3").click(function(){
+  $("#test3").val("Dolly Duck");
+});
+
+function Player(firstName, totalScore) {
+  this.firstName = firstName;
+  this.totalScore = totalScore;
+  console.log(Player);
+}
+
+let scoreCard = new ScoreCard();
+const player1 = new Player("Manuel");
+const player2 = new Player("Donovan");
+scoreCard.addPlayer(player1);
+scoreCard.addPlayer(player2);

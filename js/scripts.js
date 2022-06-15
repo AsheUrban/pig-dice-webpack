@@ -11,16 +11,16 @@ ScoreCard.prototype.addPlayer = function(player) {
 };
 
 ScoreCard.prototype.assignId = function() {
-  this.currentId += 1;
+  this.currentId += 1; //should this just asign two ids?
   return this.currentId;
 };
 
-// ScoreCard.prototype.findPlayer = function(id) {
-//   if (this.players[id] != undefined) {
-//     return this.players[id];
-//   }
-//   return false;
-// }
+ScoreCard.prototype.findPlayer = function(id) {
+  if (this.players[id] != undefined) {
+    return this.players[id];
+  }
+  return false;
+}
 
 // ScoreCard.prototype.deletePlayer = function(id) {
 //   if (this.players[id] === undefined) {
@@ -48,7 +48,16 @@ function rollDice() {
 } 
 // rollDice(); = 1-6// this is currentScore
 
-//UI Logic ------
+// UI Logic ------
 
-$('#displayresult').empty();
-const favoriteNumber = $("input#favNum").val();
+let scoreCard = new ScoreCard();
+
+function showScore(playerId) {
+  const player = ScoreCard.findPlayer(playerId);
+  $("#show-score").show();
+  $("#btn").click(function(){
+    
+  });
+}
+
+$('#displayRollDice').empty();
