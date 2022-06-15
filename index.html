@@ -10,25 +10,28 @@
   <title>PIG DICE</title>
 </head>
     <body>
-      <div class="container bottom">
-        <h1>ARE YOU READY?<h1>
-          <h5>Maybe?</h5>
-          <h2>Add a Contact:</h2>
-          <form id="new-player-1">
-            <div class="form-group">
-              <label for="new-first-name">Player1 Name: </label>
-              <input type="text"  class="form-control" id="new-first-name">
-            </div>
-            <form id="new-player-2">
-              <div class="form-group">
-                <label for="new-first-name">Player2 Name: </label>
-                <input type="text"  class="form-control" id="new-first-name">
-              </div>
-              <button type="submit" class="btn-primary">Roll Dice</button>
-            <div id="show-score-card">
-              <p>Player Name: <span class="first-name"></span></p>
-              <p>Total Score: <span class="total-score"></span></p>
-            </div>
+      <div class="container">
+        <br>
+        <br>
+        <div class="row">
+          <div class="column">
+            <h3><strong>Player 1:<span id="p1score"></span></strong></h3>
+            <br>
+            <button id="button1" type="click" class="btn-danger btn btn-primary">player one roll</button>
+          </div>
+    
+          <div class="column">
+            <h3><strong>Player 2:<span id="p2score"></span></strong></h3>
+            <br>
+            <button id="button2" type="click" class="btn-danger btn btn-primary">player two roll</button>
+    
+          </div>
         </div>
-      </body>
-</html>
+        <div class="row">
+          <div class="col-1 mx-auto">
+            <button id="button3" type="click" class="btn-danger btn btn-primary  btn-sm">Money, Money!</button>
+          </div>
+        </div>
+        <span id="big-roller"></span>
+      </div>
+    </body>

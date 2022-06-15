@@ -24,9 +24,9 @@ _Link to lesson:_ https://www.learnhowtoprogram.com/intermediate-javascript/obje
 ## Tests
 # _Describe: Roll()_
 
-Test: "It should addPlayer and assign id"
+Test: "It should create player"
 Code: 
-Expected Output: player1 = {firstName, totalScore: undefined, id: 1}
+Expected Output: player1 = {score, lastroll
 
 Test: "It should return random number between 1-6 when button is submitted"
 Code: rollDice();
