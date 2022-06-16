@@ -57,7 +57,7 @@ $(document).ready(function () {
   $("#button2").click(function(event) {
     event.preventDefault();
     newPlayer2.RollDice();
-    newPlayer2.AddRoundScore();
+    newPlayer2.AddRoundScore(); //here is where we used to have AddTotalScore which would every roll vs Adding to round score
     $("#p2currentscore").html(newPlayer2.roundScore);
     console.log(newPlayer2);
   });
@@ -67,7 +67,7 @@ $(document).ready(function () {
     newPlayer1.AddTotalScore();
     $("#p1score").html(newPlayer1.totalScore);
     newPlayer1.roundScore = 0
-  });
+  }); //explain 
 
   $("#button3").click(function(event){
     event.preventDefault();
