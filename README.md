@@ -44,7 +44,7 @@ Expected Output: {currentScore, roundScore, totalScore}
 
 ## Known Bugs
 
-* Current score can still be 0.
+* Doesn't reset once someone wins.
 
 
 ## License
