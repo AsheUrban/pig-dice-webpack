@@ -20,13 +20,14 @@ Player.prototype.AddRoundScore = function () {
   } if (this.currentScore === 1) { // || player holds
     this.roundScore = 0;
   } else {
-// this.TotalScore = this.TotalScore
+
+  return this.roundScore;
   }
 }
 
 Player.prototype.AddTotalScore = function () {
   if (this.roundScore != 0) {
-    this.totalScore += this.currentScore; 
+    this.totalScore += this.roundScore; 
   } else {
 // this.TotalScore = this.TotalScore
   }
@@ -45,13 +46,10 @@ Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
 // UI Logic
 
 $(document).ready(function () {
-  
-  
   $("#button1").click(function(event) {
     event.preventDefault();
     newPlayer1.RollDice();
     newPlayer1.AddRoundScore();
-    // newPlayer1.AddTotalScore();
     $("#p1currentscore").html(newPlayer1.roundScore);
     console.log(newPlayer1);
   });
@@ -60,7 +58,6 @@ $(document).ready(function () {
     event.preventDefault();
     newPlayer2.RollDice();
     newPlayer2.AddRoundScore();
-    // newPlayer2.AddTotalScore(); // might need for hold button
     $("#p2currentscore").html(newPlayer2.roundScore);
     console.log(newPlayer2);
   });
@@ -84,7 +81,7 @@ $(document).ready(function () {
   $("#hold-player2-button").click(function(event) {
     event.preventDefault();
     newPlayer2.AddTotalScore();
-    newPlayer2.roundScore = 0
     $("#p2score").html(newPlayer2.totalScore);
+    newPlayer2.roundScore = 0
   });
 });
