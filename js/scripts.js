@@ -44,9 +44,15 @@ Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
 // UI Logic ----------
 
 $(document).ready(function () {
-  $("#player1-roll").click(function(event) {
+  $("#player1-roll").click(function (event) {
     event.preventDefault();
     newPlayer1.RollDice();
+    if (newPlayer1.currentScore === 1) {
+      $("#player2-roll").show();
+      $("#hold-player2-button").show();
+      $("#player1-roll").hide();
+      $("#hold-player1-button").hide();
+    };
     newPlayer1.AddRoundScore();
     $("#p1-current-score").html(newPlayer1.currentScore);
     $("#p1-round-score").html(newPlayer1.roundScore);
@@ -56,14 +62,24 @@ $(document).ready(function () {
   $("#player2-roll").click(function(event) {
     event.preventDefault();
     newPlayer2.RollDice();
+    if (newPlayer2.currentScore === 1) {
+      $("#player1-roll").show();
+      $("#hold-player1-button").show();
+      $("#player2-roll").hide();
+      $("#hold-player2-button").hide();
+    };
     newPlayer2.AddRoundScore(); 
     $("#p2-current-score").html(newPlayer2.currentScore);
     $("#p2-round-score").html(newPlayer2.roundScore);
     console.log(newPlayer2);
   });
 
-  $("#hold-player1-button").click(function(event) {
+  $("#hold-player1-button").click(function (event) {
     event.preventDefault();
+    $("#player2-roll").show();
+    $("#hold-player2-button").show();
+    $("#player1-roll").hide();
+    $("#hold-player1-button").hide();
     newPlayer1.AddTotalScore();
     $("#p1-total-score").html(newPlayer1.totalScore);
     $("#big-roller").html(newPlayer1.BigRoller(newPlayer1.totalScore, newPlayer2.totalScore));
@@ -72,6 +88,10 @@ $(document).ready(function () {
 
   $("#hold-player2-button").click(function(event) {
     event.preventDefault();
+    $("#player1-roll").show();
+    $("#hold-player1-button").show();
+    $("#player2-roll").hide();
+    $("#hold-player2-button").hide();
     newPlayer2.AddTotalScore();
     $("#p2-total-score").html(newPlayer2.totalScore);
     $("#big-roller").html(newPlayer2.BigRoller(newPlayer2.totalScore, newPlayer1.totalScore));

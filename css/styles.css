@@ -1,3 +1,15 @@
+h2 {
+  font-weight: bolder;
+  color: rgb(62, 245, 62)
+  
+}
+
+h3 {
+  color: rgb(133, 60, 186);
+  font-style: sans;
+  text-align: center;
+}
+
 .container {
   padding: 25px;
 }
@@ -17,15 +29,20 @@
   padding: 25px;
 }
 
-h3 {
-  color: rgb(133, 60, 186);
-  font-style: sans;
-  text-align: center;
-}
-
 #button1 {
   align-content: center;
 }
 #button2 {
   align-content: center;
+}
+
+#player2-roll {
+  display: none;
+
+} 
+#hold-player2-button {
+  display: none;
+}
+#hold-player1-button {
+  display: content;
 }
