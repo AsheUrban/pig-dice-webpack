@@ -39,6 +39,7 @@ $(document).ready(function () {
     newPlayer1.RollDice();
     newPlayer1.AddTotalScore();
     $("#p1score").html(newPlayer1.totalScore);
+    
     console.log(newPlayer1);
   });
 

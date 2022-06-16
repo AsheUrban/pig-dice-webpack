@@ -1,6 +1,22 @@
+
+
 .column {
+  border: 2px solid black;
   padding: 12px;
-  margin: 12px;
-  color: violet;
+  background-color: black;
+  display: block;
+  width: 40%;
+  margin: auto;
+  box-sizing: border-box;
+  float: right;
+}
+
+h3 {
+  color: rgb(133, 60, 186);
+  font-style: sans;
   text-align: center;
+}
+
+#button1, #button2 {
+  align-content: center;
 }
