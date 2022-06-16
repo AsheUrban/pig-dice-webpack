@@ -1,48 +1,93 @@
+h1 {
+  color:rgb(76, 253, 76);
+  font-size: 75px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: oblique;
+}
+
+
 h2 {
-  font-weight: bolder;
-  color: rgb(62, 245, 62)
-  
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 48px;
+  color: rgb(245, 144, 62)
+}
+
+h2.important {
+  color: rgb(133, 60, 186);
 }
 
 h3 {
   color: rgb(133, 60, 186);
-  font-style: sans;
+  font-style: italic;
   text-align: center;
 }
 
-.container {
-  padding: 25px;
+h3.important {
+  color: rgb(240, 151, 78)
 }
 
-.column {
-  border: 2px solid black;
-  padding: 12px;
-  background-color: black;
-  display: block;
-  width: 40%;
-  margin: auto;
+h4 {
+  color: rgb(203, 151, 239);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+h4.important {
+  color: rgb(253, 177, 114)
+}
+
+.button {
+  margin-bottom: 10px;
+  margin-left: 35%;
+  width: 200px;
+  border-radius: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 24px;
+}
+
+.card1 {
+  padding: 25px;
+  margin-bottom: 25px;
+  margin-left: 35%;
+  width: 30%;
+  background-color: rgba(0, 0, 0, 0.822);
   box-sizing: border-box;
-  float: right;
+  border-radius: 20px;
 }
 
-.row {
+.card2 {
   padding: 25px;
+  margin-bottom: 25px;
+  margin-left: 35%;
+  width: 30%;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
-#button1 {
-  align-content: center;
-}
-#button2 {
-  align-content: center;
+#player1-roll { 
+  background-color: rgb(245, 144, 62)
 }
 
 #player2-roll {
   display: none;
-
+  background-color:  rgb(133, 60, 186);
 } 
-#hold-player2-button {
+
+#player2-hold {
   display: none;
+  background-color: rgb(133, 60, 186);
 }
-#hold-player1-button {
+
+#player1-hold {
   display: content;
+  background-color: rgb(245, 144, 62)
 }
+
+#big-roller {
+  color:rgb(76, 253, 76);
+  font-size: 75px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: fantasy;
+}
+
