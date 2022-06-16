@@ -1,4 +1,6 @@
-
+.container {
+  padding: 25px;
+}
 
 .column {
   border: 2px solid black;
@@ -11,12 +13,19 @@
   float: right;
 }
 
+.row {
+  padding: 25px;
+}
+
 h3 {
   color: rgb(133, 60, 186);
   font-style: sans;
   text-align: center;
 }
 
-#button1, #button2 {
+#button1 {
+  align-content: center;
+}
+#button2 {
   align-content: center;
 }

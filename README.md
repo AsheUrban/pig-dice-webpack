@@ -32,6 +32,10 @@ Test: "It should return random number between 1-6 when button is submitted"
 Code: rollDice();
 Expected Output: player1 = random number between 1-6
 
+Test: "It should add currentScore to RoundScore to find TotalScore. If currentScore is 1 is should 0 out RoundScore and not add anything to the totalScore."
+Code: this.roundScore;
+Expected Output: {currentScore, roundScore, totalScore}
+
 ## Setup/Installation Requirements
 
 * Clone this repository to your desktop
