@@ -1,9 +1,10 @@
 
 // Business Logic for Player ------
 
-function Player() {
+function Player(totalScore, currentScore) {
   this.totalScore = 0;
   this.currentScore = 0;
+  // this.roundScore = 0;
 }
 
 let newPlayer1 = new Player(0, 0);
@@ -39,7 +40,7 @@ $(document).ready(function () {
     newPlayer1.RollDice();
     newPlayer1.AddTotalScore();
     $("#p1score").html(newPlayer1.totalScore);
-    
+
     console.log(newPlayer1);
   });
 
