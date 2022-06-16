@@ -46,42 +46,45 @@ Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
 // UI Logic
 
 $(document).ready(function () {
-  $("#button1").click(function(event) {
+  $("#player1-roll").click(function(event) {
     event.preventDefault();
     newPlayer1.RollDice();
     newPlayer1.AddRoundScore();
-    $("#p1currentscore").html(newPlayer1.roundScore);
+    $("#p1-current-score").html(newPlayer1.currentScore);
+    $("#p1-round-score").html(newPlayer1.roundScore);
     console.log(newPlayer1);
   });
   
-  $("#button2").click(function(event) {
+  $("#player2-roll").click(function(event) {
     event.preventDefault();
     newPlayer2.RollDice();
     newPlayer2.AddRoundScore(); //here is where we used to have AddTotalScore which would every roll vs Adding to round score
-    $("#p2currentscore").html(newPlayer2.roundScore);
+    $("#p2-current-score").html(newPlayer2.currentScore);
+    $("#p2-round-score").html(newPlayer2.roundScore);
     console.log(newPlayer2);
   });
 
   $("#hold-player1-button").click(function(event) {
     event.preventDefault();
     newPlayer1.AddTotalScore();
-    $("#p1score").html(newPlayer1.totalScore);
+    $("#p1-total-score").html(newPlayer1.totalScore);
     newPlayer1.roundScore = 0
-  }); //explain 
+  }); //Hold pushes our round score to the total 
 
-  $("#button3").click(function(event){
-    event.preventDefault();
-    $("#big-roller").html(newPlayer1.BigRoller(newPlayer1.totalScore, newPlayer2.totalScore));
-    newPlayer1.totalScore = 0;
-    newPlayer2.totalScore = 0;
-    $("#p1score").html(newPlayer1.totalScore);
-    $("#p2score").html(newPlayer2.totalScore);
-  });
+  // $("#button3").click(function(event){
+  //   event.preventDefault();
+  //   $("#big-roller").html(newPlayer1.BigRoller(newPlayer1.totalScore, newPlayer2.totalScore));
+  //   newPlayer1.totalScore = 0;
+  //   newPlayer2.totalScore = 0;
+  //   $("#p1-total-score").html(newPlayer1.totalScore);
+  //   $("#p2-total-score").html(newPlayer2.totalScore);
+  // });
 
   $("#hold-player2-button").click(function(event) {
     event.preventDefault();
     newPlayer2.AddTotalScore();
-    $("#p2score").html(newPlayer2.totalScore);
+    newPlayer2.AddRoundScore();
+    $("#p2-total-score").html(newPlayer2.totalScore);
     newPlayer2.roundScore = 0
   });
 });
