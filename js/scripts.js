@@ -1,21 +1,31 @@
 
 // Business Logic for Player ------
 
-function Player(totalScore, currentScore) {
+function Player(totalScore, roundScore, currentScore) {
   this.totalScore = 0;
+  this.roundScore = 0;
   this.currentScore = 0;
-  // this.roundScore = 0;
 }
 
-let newPlayer1 = new Player(0, 0);
-let newPlayer2 = new Player(0, 0);
+let newPlayer1 = new Player(0, 0, 0);
+let newPlayer2 = new Player(0, 0, 0);
 
 Player.prototype.RollDice = function (max) {
   this.currentScore = Math.ceil(Math.random() * 6);
 }
 
-Player.prototype.AddTotalScore = function () {
+Player.prototype.AddRoundScore = function () {
   if (this.currentScore != 1) {
+    this.roundScore += this.currentScore;
+  } if (this.currentScore === 1) {
+    this.roundScore = 0;
+  } else {
+// this.TotalScore = this.TotalScore
+  }
+}
+
+Player.prototype.AddTotalScore = function () {
+  if (this.roundScore != 0) {
     this.totalScore += this.currentScore; 
   } else {
 // this.TotalScore = this.TotalScore
@@ -38,6 +48,7 @@ $(document).ready(function () {
   $("#button1").click(function(event) {
     event.preventDefault();
     newPlayer1.RollDice();
+    newPlayer1.AddRoundScore();
     newPlayer1.AddTotalScore();
     $("#p1score").html(newPlayer1.totalScore);
 
@@ -47,6 +58,7 @@ $(document).ready(function () {
 $("#button2").click(function(event) {
   event.preventDefault();
   newPlayer2.RollDice();
+  newPlayer2.AddRoundScore();
   newPlayer2.AddTotalScore();
   $("#p2score").html(newPlayer2.totalScore);
   console.log(newPlayer2);
