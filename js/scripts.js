@@ -17,7 +17,7 @@ Player.prototype.RollDice = function (max) {
 Player.prototype.AddRoundScore = function () {
   if (this.currentScore != 1) {
     this.roundScore += this.currentScore;
-  } if (this.currentScore === 1) { // || player holds
+  } if (this.currentScore === 1) { 
     this.roundScore = 0;
   } else {
 
@@ -29,21 +29,19 @@ Player.prototype.AddTotalScore = function () {
   if (this.roundScore != 0) {
     this.totalScore += this.roundScore; 
   } else {
-// this.TotalScore = this.TotalScore
   }
 }
 
 Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
-  if (newPlayer1.totalScore > newPlayer2.totalScore) {
+  if (newPlayer1.totalScore >= 100) {
     return "player 1 is a Big Roller!";
-  } else if (newPlayer1.totalScore < newPlayer2.totalScore) {
+  } else if (newPlayer2.totalScore >= 100) {
     return "player 2 is a Big Roller!";
   } else {
-    return "You're both BIG LOSERS (don't take me to DEI)";
   }
 }
 
-// UI Logic
+// UI Logic ----------
 
 $(document).ready(function () {
   $("#player1-roll").click(function(event) {
@@ -58,7 +56,7 @@ $(document).ready(function () {
   $("#player2-roll").click(function(event) {
     event.preventDefault();
     newPlayer2.RollDice();
-    newPlayer2.AddRoundScore(); //here is where we used to have AddTotalScore which would every roll vs Adding to round score
+    newPlayer2.AddRoundScore(); 
     $("#p2-current-score").html(newPlayer2.currentScore);
     $("#p2-round-score").html(newPlayer2.roundScore);
     console.log(newPlayer2);
@@ -68,23 +66,15 @@ $(document).ready(function () {
     event.preventDefault();
     newPlayer1.AddTotalScore();
     $("#p1-total-score").html(newPlayer1.totalScore);
+    $("#big-roller").html(newPlayer1.BigRoller(newPlayer1.totalScore, newPlayer2.totalScore));
     newPlayer1.roundScore = 0
-  }); //Hold pushes our round score to the total 
-
-  // $("#button3").click(function(event){
-  //   event.preventDefault();
-  //   $("#big-roller").html(newPlayer1.BigRoller(newPlayer1.totalScore, newPlayer2.totalScore));
-  //   newPlayer1.totalScore = 0;
-  //   newPlayer2.totalScore = 0;
-  //   $("#p1-total-score").html(newPlayer1.totalScore);
-  //   $("#p2-total-score").html(newPlayer2.totalScore);
-  // });
+  }); 
 
   $("#hold-player2-button").click(function(event) {
     event.preventDefault();
     newPlayer2.AddTotalScore();
-    newPlayer2.AddRoundScore();
     $("#p2-total-score").html(newPlayer2.totalScore);
+    $("#big-roller").html(newPlayer2.BigRoller(newPlayer2.totalScore, newPlayer1.totalScore));
     newPlayer2.roundScore = 0
   });
 });
