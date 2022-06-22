@@ -15,4 +15,28 @@ describe('Player', () => {
     expect(newPlayer.RollDice()).toEqual();
   });
   
+  test('should add current score to round score', () => {
+    const newPlayer = new Player()
+    expect(newPlayer.AddRoundScore(0)).toEqual(0);
+  });
+
+  test('should add current score to round score', () => {
+    const newPlayer = new Player()
+    expect(newPlayer.AddRoundScore(0)).toEqual(0);
+  });
+
+  test('should add current score to round score', () => {
+    const newPlayer = new Player()
+    newPlayer.currentScore = 1;
+    expect(newPlayer.AddRoundScore(1)).toEqual();
+  });
+  
 });
+
+// test('should give cost of just the size', () => {     
+//     const pizza = new Pizza("Small");     
+//     expect(pizza.getCost("Small")).toEqual(5);   });
+// test('should give cost of just the size', () => {
+//     const pizza = new Pizza("Small");
+//     expect(pizza.getCost("Small")).toEqual(5);
+//   });

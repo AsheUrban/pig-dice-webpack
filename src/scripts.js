@@ -7,20 +7,20 @@ export default function Player(totalScore, roundScore, currentScore) {
 let newPlayer1 = new Player(0, 0, 0);
 let newPlayer2 = new Player(0, 0, 0);
 
-// Player.prototype.RollDice = function (max) {
-//   this.currentScore = Math.ceil(Math.random() * 6);
-// }
+Player.prototype.RollDice = function (max) {
+  this.currentScore = Math.ceil(Math.random() * 6);
+}
 
-// Player.prototype.AddRoundScore = function () {
-//   if (this.currentScore != 1) {
-//     this.roundScore += this.currentScore;
-//   } if (this.currentScore === 1) { 
-//     this.roundScore = 0;
-//   } else {
+Player.prototype.AddRoundScore = function () {
+  if (this.currentScore != 1) {
+    this.roundScore += this.currentScore;
+  } if (this.currentScore === 1) { 
+    this.roundScore = 0;
+  } else {
 
-//   return this.roundScore;
-//   }
-// }
+  return this.roundScore;
+  }
+}
 
 // Player.prototype.AddTotalScore = function () {
 //   if (this.roundScore != 0) {
