@@ -10,9 +10,9 @@ describe('Player', () => {
     expect (player.currentScore).toEqual(0);
 })
 
-  // test('should generate a random number between 1 and 6', () => {
-  //   const newPlayer = new Player(0)
-  //   expect(newPlayer.rollDice()).toEqual(number);
-  // });
+  test('should generate a random number between 1 and 6', () => {
+    const newPlayer = new Player(0)
+    expect(newPlayer.RollDice()).toEqual();
+  });
   
 });
