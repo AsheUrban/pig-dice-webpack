@@ -28,14 +28,26 @@ describe('Player', () => {
   test('should add current score to round score', () => {
     const newPlayer = new Player()
     newPlayer.currentScore = 1;
-    expect(newPlayer.AddRoundScore(1)).toEqual();
+    expect(newPlayer.AddRoundScore()).toEqual();
   });
 
   test('should add round score to total score', () => {
     const newPlayer = new Player()
     newPlayer.roundScore = 5;
-    expect(newPlayer.AddTotalScore(5)).toEqual();
+    expect(newPlayer.AddTotalScore()).toEqual();
   });
+  
+  test('should determine if player1 is a winner based on score of 100 or greater', () => {
+    const newPlayer1 = new Player()
+    newPlayer1.totalScore >= 100;
+    expect(newPlayer1.BigRoller()).toEqual();
+  });
+
+  // test('should determine if player2 is a winner based on score of 100 or greater', () => {
+  //   const newPlayer2 = new Player()
+  //   newPlayer2.totalScore >= 100;
+  //   expect(newPlayer2.BigRoller()).toEqual("player 2 is a Big Roller!");
+  // });
 
   
 });

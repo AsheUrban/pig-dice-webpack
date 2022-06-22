@@ -29,12 +29,12 @@ Player.prototype.AddTotalScore = function () {
   }
 }
 
-// Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
-//   if (newPlayer1.totalScore >= 100) {
-//     return "player 1 is a Big Roller!";
-//   } else if (newPlayer2.totalScore >= 100) {
-//     return "player 2 is a Big Roller!";
-//   } else {
-//   }
-// }
+Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
+  if (newPlayer1.totalScore >= 100) {
+    return "player 1 is a Big Roller!";
+  } else if (newPlayer2.totalScore >= 100) {
+    return "player 2 is a Big Roller!";
+  } else {
+  }
+}
 
