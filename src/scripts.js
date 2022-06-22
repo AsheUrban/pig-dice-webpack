@@ -22,12 +22,12 @@ Player.prototype.AddRoundScore = function () {
   }
 }
 
-// Player.prototype.AddTotalScore = function () {
-//   if (this.roundScore != 0) {
-//     this.totalScore += this.roundScore; 
-//   } else {
-//   }
-// }
+Player.prototype.AddTotalScore = function () {
+  if (this.roundScore != 0) {
+    this.totalScore += this.roundScore; 
+  } else {
+  }
+}
 
 // Player.prototype.BigRoller = function (player1TotalScore, player2TotalScore) {
 //   if (newPlayer1.totalScore >= 100) {

@@ -30,13 +30,13 @@ describe('Player', () => {
     newPlayer.currentScore = 1;
     expect(newPlayer.AddRoundScore(1)).toEqual();
   });
+
+  test('should add round score to total score', () => {
+    const newPlayer = new Player()
+    newPlayer.roundScore = 5;
+    expect(newPlayer.AddTotalScore(5)).toEqual();
+  });
+
   
 });
 
-// test('should give cost of just the size', () => {     
-//     const pizza = new Pizza("Small");     
-//     expect(pizza.getCost("Small")).toEqual(5);   });
-// test('should give cost of just the size', () => {
-//     const pizza = new Pizza("Small");
-//     expect(pizza.getCost("Small")).toEqual(5);
-//   });
