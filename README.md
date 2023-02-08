@@ -38,13 +38,14 @@ Expected Output: {currentScore, roundScore, totalScore}
 
 ## Setup/Installation Requirements
 
-* Clone this repository to your desktop
-* Navigate to the top level of the directory
-* Open index.html in your browser
+* _Clone or download this repository to your local_
+* _Navigate to the top level of the directory_
+* _Run npm install_
+* _Then, npm run start_
 
 ## Known Bugs
 
-* Doesn't reset once someone wins.
+* _Doesn't reset once someone wins/ no winner is determined._
 
 
 ## License
