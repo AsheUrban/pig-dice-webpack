@@ -4,9 +4,6 @@
 
 #### Refractored to use webpack by: _Ashe Urban_
 
-#### _A game of chance!_
-
-
 ## Technologies Used
 
 * _JavaScript_
@@ -18,6 +15,8 @@
 
 
 ## Description
+
+#### _A game of chance!_
 
 _Write a program where two users can play Pig dice against each other. Start with your business logic, and once it is completed move onto your user interface logic._
 
