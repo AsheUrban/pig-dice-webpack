@@ -2,7 +2,7 @@
 
 #### Contributors: _Manuel Raygoza_ _Donovan Weber_ & _Ashe Urban_
 
-## Refractored to use webpack by: _Ashe Urban_
+#### Refractored to use webpack by: _Ashe Urban_
 
 #### _A game of chance!_
 
