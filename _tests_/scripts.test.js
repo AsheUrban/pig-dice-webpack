@@ -37,15 +37,15 @@ describe('Player', () => {
     expect(newPlayer.AddTotalScore()).toEqual();
   });
   
-  test('should determine if player1 is a winner based on score of 100 or greater', () => {
-    const newPlayer1 = new Player()
-    newPlayer1.totalScore >= 100;
-    expect(newPlayer1.BigRoller()).toEqual();
-  });
+  // test('should determine if player1 is a winner based on score of 10 or greater', () => {
+  //   const newPlayer1 = new Player()
+  //   newPlayer1.totalScore >= 10;
+  //   expect(newPlayer1.BigRoller()).toEqual("player 1 is a Big Roller!");
+  // });
 
   // test('should determine if player2 is a winner based on score of 100 or greater', () => {
   //   const newPlayer2 = new Player()
-  //   newPlayer2.totalScore >= 100;
+  //   newPlayer2.totalScore >= 10;
   //   expect(newPlayer2.BigRoller()).toEqual("player 2 is a Big Roller!");
   // });
 

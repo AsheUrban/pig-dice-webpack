@@ -30,9 +30,9 @@ Player.prototype.AddTotalScore = function (roundScore, totalScore) {
 };
 
 Player.prototype.BigRoller = function (totalScore) {
-  if (newPlayer1.totalScore >= 100) {
+  if (newPlayer1.totalScore >= 10) {
     return "player 1 is a Big Roller!";
-  } else if (newPlayer2.totalScore >= 100) {
+  } else if (newPlayer2.totalScore >= 10) {
     return "player 2 is a Big Roller!";
   } else {
   }

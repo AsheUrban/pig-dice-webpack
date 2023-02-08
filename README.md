@@ -1,40 +1,29 @@
 # _Two Day Project: Pig Dice_
 
-#### Contributors: _Manuel Raygoza_ _Donovan Weber_ _Ashe Urban_
+#### Contributors: _Manuel Raygoza_ _Donovan Weber_ & _Ashe Urban_
+
+## Refractored to use webpack by: _Ashe Urban_
 
 #### _A game of chance!_
 
 
 ## Technologies Used
 
-* JavaScript
-* JQuery
-* HTML
-* CSS
-* Boostrap
-* Markdown
-* Git/hub
+* _JavaScript_
+* _JQuery_
+* _HTML_
+* _CSS_
+* _Bootstrap_
+* _Markdown_
+
 
 ## Description
 
-_See Brainstorm below_
+_Write a program where two users can play Pig dice against each other. Start with your business logic, and once it is completed move onto your user interface logic._
+
+_Make sure that your user interface and business logics are clearly separated, and practice separation of concerns when designing your user interface function._
 
 _Link to lesson:_ https://www.learnhowtoprogram.com/intermediate-javascript/object-oriented-javascript/game-of-choice-two-day-project
-
-## Tests
-# _Describe: Roll()_
-
-Test: "It should create player"
-Code: 
-Expected Output: player1 = {score, lastroll
-
-Test: "It should return random number between 1-6 when button is submitted"
-Code: rollDice();
-Expected Output: player1 = random number between 1-6
-
-Test: "It should add currentScore to RoundScore to find TotalScore. If currentScore is 1 is should 0 out RoundScore and not add anything to the totalScore."
-Code: this.roundScore;
-Expected Output: {currentScore, roundScore, totalScore}
 
 ## Setup/Installation Requirements
 
@@ -46,7 +35,6 @@ Expected Output: {currentScore, roundScore, totalScore}
 ## Known Bugs
 
 * _Doesn't reset once someone wins/ no winner is determined._
-
 
 ## License
 
